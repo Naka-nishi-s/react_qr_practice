@@ -5,6 +5,7 @@ export const Reader = () => {
     onDecodeResult(result) {
       const text = result.getText();
 
+      // ここでfetchでリクエストを送り、完了であればその旨を表示
       if (/^https?:\/\//.test(text)) {
         window.location.href = text;
       }
